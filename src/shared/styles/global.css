@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@layer utilities {
+  .dialog-center {
+    @apply left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+  }
+}

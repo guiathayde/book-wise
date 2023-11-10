@@ -1,0 +1,44 @@
+{
+  "root": true,
+  "extends": ["@eliasgcf/eslint-config-next", "plugin:tailwindcss/recommended"],
+  "rules": {
+    "jsx-a11y/anchor-is-valid": "off",
+    "@next/next/no-img-element": "off",
+    "react/button-has-type": [
+      "error",
+      {
+        "button": true,
+        "submit": true,
+        "reset": true
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "arrowParens": "always",
+        "singleQuote": true,
+        "printWidth": 90,
+        "trailingComma": "all"
+      }
+    ],
+    "no-use-before-define": ["error", { "functions": false }],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "alphabetize": { "order": "asc", "ignoreCase": true },
+        "groups": [
+          "module",
+          "/^@app/",
+          "/^@components/",
+          "/^@ui/",
+          "/^@libs/",
+          "/^@shared/",
+          "/^@utils/",
+          ["parent", "sibling"],
+          "index"
+        ]
+      }
+    ]
+  }
+}
